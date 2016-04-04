@@ -1,0 +1,19 @@
+Lab 13 Design Document
+
+The purpose of this lab is to give us experience with binary search trees. For this lab assignment we will be using the basic implementation of a binary search tree class and a binary search tree node that are provided while adding some new functionality.
+
+The given classes are based on a linked list with nodes. The binary tree node adds a pointer to the left "child" and the right "child". The binary search tree given for the assignment contains only the print function to print out a visual representation of the correctly ordered tree according to the established rules regarding this particular type of data structure. These rules are as follows: A binary tree is either empty or constructed such that it has a special node called the root. This tree has two sets of nodes, left and right, called the left subtree and the right subtree, where left and right themselves are binary trees. Binary trees (just like linked lists) are made up of nodes pointing to other nodes. Finally, binary trees are recursive data structures.
+
+The data members/functions in the binary tree class that allow this type of data structure to follow these rules are as follows:
+-BTNode<T>* root; a pointer to the root of the tree
+-void insert(value); a function to insert a new node into the binary search tree 	according to the binary search tree rules
+-bool search(value); a function to dertermine whether or not the input value 	exists in the tree, returns true if the value is found or false if the 	value is not found
+-void printInOrder(); recursive function to print out the values contained in 	the tree in ascending (sorted) order
+-void remove(value); function to remove a node from the tree, including removal 	of a node with no children, left child, right child, or two children
+-void print(); function to print out a visual representation of the tree (not 	just print the tree's values on a single line)
+
+The first four of these member functions were implemented as per the requirements of lab13.
+
+In main, the above functions are tested to ensure full functionality. remove is called first to test the program's response to removing a node when the tree is empty. Next insert is called with eight different values. At each insert these values are organized according to the binary tree properties. After the values are inserted, a visual representation of the tree is printed using the provided print function separate from printInOrder. Two different values are removed, first the root, then a random node to ensure that each type of situation is tested with a print after each removal to show success. Lastly the printInOrder function is called to print out the binary tree from lowest value to greatest value.
+
+
